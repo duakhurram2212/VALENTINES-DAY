@@ -1,0 +1,381 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Pacifico&family=Quicksand&family=Dancing+Script&display=swap');
+
+/* Main Heading Styling */
+.main-heading {
+  text-align: center;
+  font-size: 3rem;
+  color: #FF69B4; /* Hot Pink */
+  margin-top: 20px;
+  font-family: 'Dancing Script', cursive; /* Pretty, cursive font */
+}
+
+/* Subheading Styling */
+.subheading {
+  text-align: center;
+  font-size: 2rem;
+  color: #FF1493; /* Deep Pink */
+  margin-top: 10px;
+  font-family: 'Pacifico', cursive; /* Pretty, rounded font */
+}
+
+/* Buttons Container Styling */
+.buttons-container {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly; /* Space between the buttons */
+  width: 100%;
+}
+
+/* Interactive Buttons Styling */
+.interactive-button {
+  font-size: 1.5rem;
+  padding: 15px 30px;
+  background: linear-gradient(145deg, #FF69B4, #FF1493);
+  border: none;
+  color: white;
+  border-radius: 30px; /* Heart-style button */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Quicksand', sans-serif; /* Pretty, modern font */
+  width: 180px;
+  margin: 0 20px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.interactive-button:hover {
+  transform: scale(1.1);
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Special Heart-shaped Button Styling */
+.interactive-button.heart {
+  border-radius: 50% 50% 50% 0; /* Half-circle */
+  background: linear-gradient(145deg, #FF1493, #FF69B4);
+}
+
+.interactive-button.heart:hover {
+  transform: scale(1.2);
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Question Heading Styling */
+.question-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: #8A2BE2; /* BlueViolet */
+  margin-top: 20px;
+  font-family: 'Dancing Script', cursive;
+}
+
+/* Question Subheading Styling */
+.question-subheading {
+  text-align: center;
+  font-size: 3rem; /* Increased font size for better visibility */
+  color: #DC143C; /* Crimson */
+  margin-top: 20px;
+  font-family: 'Times New Roman', serif; /* Elegant and stylish */
+  letter-spacing: 2px; /* Added letter-spacing for better spacing */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adding subtle shadow for depth */
+  transition: color 0.3s ease; /* Smooth color transition for hover effect */
+}
+
+.question-subheading:hover {
+  color: #FF69B4; /* HotPink color on hover */
+  cursor: pointer; /* Adding pointer cursor for interactivity */
+}
+
+/* Valentine Question Styling */
+.valentine-question {
+  text-align: center;
+  margin-top: 60px;
+  font-family: 'Pacifico', cursive; /* Pretty, rounded font */
+  color: #8A2BE2;
+  animation: fadeIn 2s ease-in-out;
+  transition: transform 0.5s ease-in-out; /* Adding smooth transition for the "Do you want to have a short tour?" question */
+}
+
+.valentine-question:hover {
+  transform: scale(1.05); /* Scale up the question on hover */
+}
+
+/* LEGO Animation Styling */
+.lego-animation {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 2rem;
+  color: #32CD32; /* LimeGreen */
+}
+
+/* Floating Elements Styling */
+.floating-element {
+  position: absolute;
+  font-size: 2rem;
+  animation: float 10s infinite;
+}
+
+.floating-element.heart {
+  color: #FF1493;
+}
+
+.floating-element.balloon {
+  color: #FF4500;
+}
+
+.floating-element.flower {
+  color: #FFD700;
+}
+
+.floating-element.butterfly {
+  color: #8A2BE2;
+}
+
+/* Animation for Floating Elements */
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Fade-in animation for elements */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.lego-infinite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  animation: legoAnimation 2s ease-out forwards;
+}
+
+.lego-block {
+  width: 50px;
+  height: 25px;
+  background-color: yellow;
+  margin: 5px;
+  border-radius: 5px;
+  position: relative;
+  animation: legoBlockAnimation 1s ease-in-out infinite;
+}
+
+.lego-block:nth-child(odd) {
+  background-color: blue;
+}
+
+/* Animation to move LEGO blocks into place */
+@keyframes legoAnimation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes legoBlockAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Hugging animation (simplified) */
+.couple-hug .hugging {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  color: red;
+  animation: hugAnimation 2s ease-in-out;
+}
+
+@keyframes hugAnimation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.no-button {
+  position: absolute;
+  transition: top 0.5s, left 0.5s;
+}
+
+.lego-infinite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  animation: legoAnimation 2s ease-out forwards;
+}
+
+.lego-block {
+  width: 50px;
+  height: 25px;
+  background-color: yellow;
+  margin: 5px;
+  border-radius: 5px;
+  position: relative;
+  animation: legoBlockAnimation 1s ease-in-out infinite;
+}
+
+.lego-block:nth-child(odd) {
+  background-color: blue;
+}
+
+/* Animation to move LEGO blocks into place */
+@keyframes legoAnimation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes legoBlockAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Hugging animation (simplified) */
+.couple-hug .hugging {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  color: red;
+  animation: hugAnimation 2s ease-in-out;
+}
+
+@keyframes hugAnimation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.full-screen-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);  /* Semi-transparent background */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-align: center;
+  z-index: 9999;
+}
+
+.full-screen-message h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.full-screen-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);  /* Semi-transparent background */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-align: center;
+  z-index: 9999;
+  flex-direction: column;
+}
+
+.full-screen-message h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.floating-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;  /* So it doesn't interfere with the message */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+
+.floating-heart, .floating-rose, .floating-balloon {
+  font-size: 3rem;
+  position: absolute;
+  animation: floatAround 8s ease-in-out infinite;
+}
+
+.floating-heart {
+  animation-delay: 2s;
+}
+
+.floating-rose {
+  animation-delay: 2s;
+}
+
+.floating-balloon {
+  animation-delay: 2s;
+}
+
+@keyframes floatAround {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-100px, -100px); /* Shift up a bit */
+  }
+  50% {
+    transform: translate(200px,-100px); /* Shift down more */
+  }
+  75% {
+    transform: translate(-150px,-250px); /* Move further down */
+  }
+  100% {
+    transform: translate(0,-200px); /* End lower on the screen */
+  }
+}
